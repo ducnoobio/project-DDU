@@ -15,6 +15,7 @@ body {
 /* common */
 a {
     text-decoration: none;
+    color: #848484;
 }
 
 .content {
@@ -59,7 +60,7 @@ a {
     width: 910px;
     height: 40px;
     border: 1px solid #d5d3d3;
-    border-radius: 10px;
+    border-radius:  10px;
 }
 
 .header-seach{
@@ -74,6 +75,8 @@ a {
     text-align: center;
     font-weight: 400;
     border: 0;
+    flex: 1 1 0%;
+    outline: none;
 }
 
 .header-text:focus{
@@ -101,6 +104,11 @@ a {
     padding: 8px 16px;
 }
 
+.home:hover{
+    background-color: rgba(0, 96, 255, 0.12);
+    border-radius: 10px;
+}
+
 .header-home{
     width: 24px;
     height: 24px;
@@ -113,6 +121,11 @@ a {
     padding: 8px 24px;
 }
 
+.face:hover{
+    background: rgb(232, 230, 230);
+    border-radius: 10px;
+}
+
 .header-face{
     width: 24px;
     height: 24px;
@@ -120,13 +133,49 @@ a {
 }
 
 .cart{
+    width: 40px;
+    height: 40px;
+    position: relative;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 24px;
+}
+
+.cart:hover{
+    background: rgba(0, 96, 255, 0.12);
+    border-radius: 10px;
+}
+
+.cart::before{
+    position: absolute;
+    left: -15px;
+    content: "";
+    height: 20px;
+    border: 1px solid rgb(219, 219, 219);
 }
 
 .shopping{
     width: 24px;
     height: 24px;
 }
+
+.shopping__span{
+    position: absolute;
+    top: -2px;
+    left: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    color: white;
+    font-weight: 500;
+    background: red;
+}
+
 .header__hang2{
     display: flex;
     justify-content: space-between;
