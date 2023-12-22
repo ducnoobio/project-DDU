@@ -244,19 +244,159 @@ a {
     background: #f5f5fa;
 }
 
+
 /* ----------product---------- */
 
 .main__intro{
-    height: 300px;
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+}
+
+.main__intro--img-1{
+    width: 360px;
+    height: 360px;
+    border-radius: 12px;
+}
+
+.main__intro--list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.main__into--img{
+    width: 173px;
+    height: 173px;
+    border-radius: 12px;
+}
+
+.giatothomnay{
+    padding: 12px 16px;
+    margin-top: 20px;
     background: white;
     border-radius: 10px;
 }
 
-.giatothomnay{
-    height: 300px;
-    margin-top: 20px;
-    background: white;
-    border-radius: 10px;
+.giatothomnay__row-1{
+    height: 24px;
+    display: flex;
+}
+
+.giatothomnay__row-1--title{
+    margin-right: 12px;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: rgb(39, 39, 42);
+}
+
+.time{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.time__min{
+    display: flex;
+    align-items: center;
+    height: 24px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0px 4px;
+    padding: 0px 3px;
+    background-color: rgb(255, 66, 78);
+    border-radius: 4px;
+    color: white;
+}
+
+.xemthem{
+    display: flex;
+    margin-left: auto;
+}
+
+.xemthem--desc{
+    display: flex;
+    align-items: center;
+    color: blue;
+}
+
+.xemthem--icon{
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+}
+
+.giatothomnay__row-2{
+    padding-top: 12px;
+}
+
+.giatothomnay__list{
+    display: flex;
+    gap: 16px;
+}
+
+.giatothomnay__image{
+    width: 142px;
+    height: 142px;
+}
+
+.giatothomnay__sale{
+    position: relative;
+    top: -142px;
+    right: -4px;
+    padding: 4px 2px;
+    background: rgb(255, 219, 222);
+    border-radius: 4px;
+    color: rgb(255, 66, 78);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.giatothomnay__monney{
+    display: flex; 
+    justify-content: center; 
+    gap: 2px;
+    margin: 8px 0;
+    color: rgb(245, 91, 101);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+sup{
+    font-size: 1rem;
+}
+
+.crossbar{
+    position: relative;
+    display: flex;
+    width: 136px;
+    height: 20px;
+    border-radius: 99px;
+    background: #ffaaaf;
+}
+
+.crossbar__percenter{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(255, 66, 78);
+    height: 20px;
+    border-radius: 99px;
+    min-width: 20px;
+}
+
+.crossbar__desc{
+    color: white;
+    font-size: 1.1rem;
+    padding-left: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
 .sanphambanchay{
