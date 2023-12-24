@@ -400,10 +400,122 @@ sup{
 }
 
 .sanphambanchay{
-    height: 300px;
+    padding: 12px 16px;
     margin-top: 20px;
     background: white;
     border-radius: 10px;
+}
+
+.sanphambanchay__title{
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: rgb(39, 39, 42);
+}
+
+.spbc__btn{
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+.sanphambanchay__btn{
+    height: 30px;
+    padding: 0 16px;
+    border: 1px solid rgb(221, 221, 227);
+    border-radius: 99px;
+    background: white;
+    font-size: 1.4rem;
+    text-align: center;
+    color: rgb(39, 39, 42);
+}
+
+.sanphambanchay__btn:hover{
+    background: rgb(227, 227, 227);
+}
+
+.sanphambanchay__btn:active{
+    background: rgb(179, 179, 179);
+}
+
+.sanphambanchay__btn-1{
+    color: blue;
+    border: 1px solid blue;
+}
+
+.sanphambanchay__btn-1:hover{
+    background: rgba(10, 104, 255, 0.12);
+}
+
+.sanphambanchay__list{
+    display: flex;
+    gap: 8px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+}
+
+.sanphambanchay__item{
+    border: 1px solid rgb(235, 235, 240);
+    border-radius: 10px;
+}
+
+.sanphambanchay__item:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+}
+
+.sanphambanchay-1{
+    width: 175px;
+    height: 175px;
+}
+
+.info{
+    padding: 8px;
+}
+
+.chinhhang{
+    width: 90px;
+    height: 20px;
+}
+
+.sanphambanchay__desc{
+    margin-top: 6px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgb(39, 39, 42);
+}
+
+.star{
+    margin-top: 6px;
+    height: 12px;
+}
+
+.sanphambanchay__monney{
+    font-size: 1.6rem;
+}
+
+.sanphambanchay__footer--logo{
+    width: 160px;
+}
+
+.sanphambanchay__footer--logo{
+    display: flex;
+    gap: 5px;
+    padding-top: 8px;
+    border-top: 1px solid rgb(235, 235, 240);
+    margin-top: 15px;
+}
+
+.logo__now{
+    width: 32px;
+    height: 16px;
+}
+
+.sanphambanchay__footer--logo-desc{
+    display: flex;
+    align-items: center;
+    color: #848484;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 /* ----------footer---------- */
