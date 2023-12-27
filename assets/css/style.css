@@ -72,7 +72,7 @@ a {
 .header-text{
     padding-left: 10px;
     font-size: 1.7rem;
-    text-align: center;
+    text-align: left;
     font-weight: 400;
     border: 0;
     flex: 1 1 0%;
@@ -113,6 +113,10 @@ a {
     width: 24px;
     height: 24px;
     margin-right: 10px;
+}
+
+.home span{
+    color: #0075ff;
 }
 
 .face{
@@ -190,6 +194,7 @@ a {
 
 .header__hang2--right{
     display: flex;
+    align-items: center;
 }
 
 .header__desc{
@@ -219,7 +224,7 @@ a {
 }
 
 /* -------------side-bar--------------- */
-.side-bar{
+.side-bar {
     max-height: 100vh;
     position: sticky;
     overflow-y: hidden;
@@ -227,12 +232,74 @@ a {
     overflow-y: scroll;
     width: 230px;
     height: 2000px;
+    background-color: #f5f5fa;
+    border-radius: 10px;
+
+}
+
+
+.side-bar::-webkit-scrollbar {
+    background-color: transparent;
+
+
+}
+
+.side-bar-danhmuc {
+    padding: 15px 15px;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+.side-bar-list {
+    display: flex;
+    align-items: center;
+    padding: 7px 0;
+}
+
+.side-bar-noibat {
+    margin-top: 20px;
+    padding: 15px 15px;
     background-color: white;
     border-radius: 10px;
 }
 
-.side-bar::-webkit-scrollbar{
-    background-color: transparent;
+.side-bar-banhang {
+    margin-top: 20px;
+    padding: 15px 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.danhmuc-noibat-banhang {
+    color: black;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.side-bar-font {
+    /* font-size: 1.45rem; */
+    color: rgb(56, 56, 61);
+    padding-left: 7px;
+    font-size: 1.4rem;
+}
+
+.side-bar-img {
+    width: 32px;
+    height: 32px;
+}
+
+.side-bar-banhang {
+    display: flex;
+    gap: 5px;
+}
+
+.danhmuc-noibat-banhang1 {
+
+    font-size: 1.4rem;
+    margin-top: 12px;
+
 }
 
 /* --------------main-body--------------- */
