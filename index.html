@@ -70,12 +70,12 @@
                 </div>
                 <div class="header__hang2">
                     <ul class="header__hang2--left">
-                        <li><a href="https://tiki.vn" target="_blank">Đón chờ 22/12</a></li>
-                        <li><a href="https://tiki.vn" target="_blank">Coupon 600k</a></li>
-                        <li><a href="https://tiki.vn" target="_blank">Khỏe đẹp</a></li>
-                        <li><a href="https://tiki.vn" target="_blank">Nhà cửa</a></li>
-                        <li><a href="https://tiki.vn" target="_blank">Sách</a></li>
-                        <li><a href="https://tiki.vn" target="_blank">Thể thao</a></li>
+                        <li><a href="https://tiki.vn/khuyen-mai/2812-xa-kho-cuoi-nam?from=header_keyword" target="_blank" class="header__hang2--a">Đón chờ 22/12</a></li>
+                        <li><a href="https://tiki.vn/khuyen-mai/2812-xa-kho-cuoi-nam?waypoint_id=coupon&from=header_keyword" target="_blank" class="header__hang2--a">Coupon 600k</a></li>
+                        <li><a href="https://tiki.vn/lam-dep-suc-khoe/c1520?from=header_keyword" target="_blank" class="header__hang2--a">Khỏe đẹp</a></li>
+                        <li><a href="https://tiki.vn/nha-cua-doi-song/c1883?from=header_keyword" target="_blank" class="header__hang2--a">Nhà cửa</a></li>
+                        <li><a href="https://tiki.vn/nha-sach-tiki/c8322?from=header_keyword" target="_blank" class="header__hang2--a">Sách</a></li>
+                        <li><a href="https://tiki.vn/the-thao-da-ngoai/c1975?from=header_keyword" target="_blank" class="header__hang2--a">Thể thao</a></li>
                     </ul>
                     
                     <div class="header__hang2--right">
@@ -240,14 +240,43 @@
                         <div class="giatothomnay__row-1">
                             <h2 class="giatothomnay__row-1--title">Giá tốt hôm nay</h2>
                             <div class="time">
-                                <span class="time__min">00</span>
-                                <b>:</b>
-                                <span class="time__min">00</span>
-                                <b>:</b>
-                                <span class="time__min">01</span>
+                                <div id="wrapper">
+                                    <div class="block" id="hours"></div>
+                                    <div style="font-size: 2rem; font-weight: 700; color: #787878;">:</div>
+                                    <div class="block" id="minutes"></div>
+                                    <div style="font-size: 2rem; font-weight: 700; color: #787878;">:</div>
+                                    <div class="block" id="seconds"></div>
+                                  </div>
+                                  
+                                  <script>
+                                    const countdownInterval = setInterval(updateCountdown, 1000);
+                                  
+                                    function updateCountdown() {
+                                      const now = new Date().getTime();
+                                      const endDate = new Date('December 31, 2023 23:59:59').getTime();
+                                      const distance = endDate - now;
+                                  
+                                      if (distance > 0) {
+                                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                                  
+                                        document.getElementById('hours').innerHTML = padZero(hours);
+                                        document.getElementById('minutes').innerHTML = padZero(minutes);
+                                        document.getElementById('seconds').innerHTML = padZero(seconds);
+                                      } else {
+                                        clearInterval(countdownInterval);
+                                        document.getElementById('wrapper').innerHTML = 'Đếm ngược đã kết thúc!';
+                                      }
+                                    }
+                                  
+                                    function padZero(number) {
+                                      return (number < 10 ? '0' : '') + number;
+                                    }
+                                  </script>
                             </div>
                             <div class="xemthem">
-                                <a href="#!" class="xemthem--desc">Xem thêm</a>
+                                <a href="https://tiki.vn/deal-hot?tab=now" class="xemthem--desc">Xem thêm</a>
                                 <img src="./img/xemthem--icon.png" alt="" class="xemthem--icon">
                             </div>
                         </div>
@@ -255,7 +284,7 @@
                         <div class="giatothomnay__row-2">
                             <ul class="giatothomnay__list">
                                 <!-- 1 -->
-                                <li class="giatothomnay__item">
+                                <a href="https://tiki.vn/deal-hot?tab=now&from_item=273309460"><li class="giatothomnay__item">
                                     <img src="./img/main__giatothomnay-1.webp" alt="" class="giatothomnay__image">
                                     <span class="giatothomnay__sale">-30%</span>
                                     <div class="giatothomnay__monney">
@@ -267,8 +296,9 @@
                                         <span class="crossbar__desc">đang mở bán</span>
                                     </div>
                                 </li>
+                                </a>
                                 <!-- 2 -->
-                                <li class="giatothomnay__item">
+                                <a href="https://tiki.vn/deal-hot?tab=now&from_item=273309460"><li class="giatothomnay__item">
                                     <img src="./img/main__giatothomnay-2.webp" alt="" class="giatothomnay__image">
                                     <span class="giatothomnay__sale">-27%</span>
                                     <div class="giatothomnay__monney">
@@ -280,8 +310,9 @@
                                         <span class="crossbar__desc">đang mở bán</span>
                                     </div>
                                 </li>
+                                </a>
                                 <!-- 3 -->
-                                <li class="giatothomnay__item">
+                                <a href="https://tiki.vn/deal-hot?tab=now&from_item=273309460"><li class="giatothomnay__item">
                                     <img src="./img/main__giatothomnay-3.webp" alt="" class="giatothomnay__image">
                                     <span class="giatothomnay__sale">-47%</span>
                                     <div class="giatothomnay__monney">
@@ -293,8 +324,9 @@
                                         <span class="crossbar__desc">đang mở bán</span>
                                     </div>
                                 </li>
+                                </a>
                                 <!-- 4 -->
-                                <li class="giatothomnay__item">
+                                <a href="https://tiki.vn/deal-hot?tab=now&from_item=273309460"><li class="giatothomnay__item">
                                     <img src="./img/main__giatothomnay-4.webp" alt="" class="giatothomnay__image">
                                     <span class="giatothomnay__sale">-55%</span>
                                     <div class="giatothomnay__monney">
@@ -306,8 +338,9 @@
                                         <span class="crossbar__desc">đang mở bán</span>
                                     </div>
                                 </li>
+                                </a>
                                 <!-- 5 -->
-                                <li class="giatothomnay__item">
+                                <a href="https://tiki.vn/deal-hot?tab=now&from_item=273309460"><li class="giatothomnay__item">
                                     <img src="./img/main__giatothomnay-5.webp" alt="" class="giatothomnay__image">
                                     <span class="giatothomnay__sale">-55%</span>
                                     <div class="giatothomnay__monney">
@@ -319,8 +352,9 @@
                                         <span class="crossbar__desc">đang mở bán</span>
                                     </div>
                                 </li>
+                                </a>
                                 <!-- 6 -->
-                                <li class="giatothomnay__item">
+                                <a href="https://tiki.vn/deal-hot?tab=now&from_item=273309460"><li class="giatothomnay__item">
                                     <img src="./img/main__giatothomnay-6.webp" alt="" class="giatothomnay__image">
                                     <span class="giatothomnay__sale">-56%</span>
                                     <div class="giatothomnay__monney">
@@ -332,8 +366,9 @@
                                         <span class="crossbar__desc">đang mở bán</span>
                                     </div>
                                 </li>
+                                </a>
                                 <!-- 7 -->
-                                <li class="giatothomnay__item">
+                                <a href="https://tiki.vn/deal-hot?tab=now&from_item=273309460"><li class="giatothomnay__item">
                                     <img src="./img/main__giatothomnay-7.webp" alt="" class="giatothomnay__image">
                                     <span class="giatothomnay__sale">-26%</span>
                                     <div class="giatothomnay__monney">
@@ -345,6 +380,7 @@
                                         <span class="crossbar__desc">đang mở bán</span>
                                     </div>
                                 </li>
+                                </a>
                             </ul>
                         </div>
                     </section>
@@ -471,7 +507,7 @@
                     </section>
 
                     <!-- gợi ý hôm nay -->
-                    <div class="gyhn">
+                    <div class="gyhn">  
                         <div class="gyhn__header" style="position: sticky; top: -2px; z-index: 997;">
                             <h2 class="gyhn__title">Gợi ý hôm nay</h2>
                             <div class="gyhn__header--2">
@@ -847,7 +883,6 @@
                 </div>
 
                 <!-- footer(phần cuối trang) -->
-                <!-- footer(phần cuối trang) -->
                 <footer class="footer">
                     <ul class="footer-p1">
                             <li class="footer-p1-1">
@@ -911,41 +946,7 @@
                             </li>
                             <li class="footer-p1-4">
                                     <h1 class="footer-h1">Phương thức thanh toán </h1>
-                                    <figure class="footer-p1-ul-img">
-                                            <img class="footer-p1-img-1"
-                                                    src="./img/footer-p1-bo-cong-thuong.svg" alt="">
-                                            <img class="footer-p1-img-1"
-                                                    src="./img/footer-p1-dmca_protected_sml_120y.png"
-                                                    alt="">
-                                            <img class="footer-p1-img-1"
-                                                    src="./img/footer-p1-dmca_protected_sml_120y.png"
-                                                    alt="">
-                                            <img class="footer-p1-img-1"
-                                                    src="./img/footer-p1-dmca_protected_sml_120y.png"
-                                                    alt="">
-                                            <img class="footer-p1-img-1"
-                                                    src="./img/footer-p1-dmca_protected_sml_120y.png"
-                                                    alt="">
-                                            <img class="footer-p1-img-1"
-                                                    src="./img/footer-p1-dmca_protected_sml_120y.png"
-                                                    alt="">
-                                            <img class="footer-p1-img-1"
-                                                    src="./img/footer-p1-dmca_protected_sml_120y.png"
-                                                    alt="">
-                                            <img class="footer-p1-img-1"
-                                                    src="./img/footer-p1-dmca_protected_sml_120y.png"
-                                                    alt="">
-                                            <img class="footer-p1-img-1"
-                                                    src="./img/footer-p1-dmca_protected_sml_120y.png"
-                                                    alt="">
-                                            <img class="footer-p1-img-1"
-                                                    src="./img/footer-p1-dmca_protected_sml_120y.png"
-                                                    alt="">
-                                            <img class="footer-p1-img-1"
-                                                    src="./img/footer-p1-dmca_protected_sml_120y.png"
-                                                    alt="">
-
-                                    </figure>
+                                    <img src="./img/footer-p1-ul-img.png" alt="" class="footer-p1-ul-img">
                                     <h1 class="footer-h1">Dịch vụ giao hàng</h1>
                                     <ul class="footer-p1-ul">
                                             <img class="footer-p1-img-3"
@@ -953,8 +954,8 @@
                                     </ul>
                             </li>
                             <li class="footer-p1-5">
-                                    <h1 class="footer-h1">Kết nối với chúng tôi</h1>
-                                    <figure class="footer-p1-ul-img">
+                                    <h1 class="footer-h1 footer-h1-5">Kết nối với chúng tôi</h1>
+                                    <figure class="footer-p1-ul-img footer-p1-ul-img-2">
                                             <img class="footer-p1-img-1"
                                                     src="./img/footer-p1-fb.png" alt="">
 
@@ -967,15 +968,17 @@
 
                                     </figure>
                                     <h1 class="footer-h1">Tải ứng dụng trên điện thoại</h1>
-                                    <figure class="footer-p1-ul-img">
+                                    <figure class="footer-p1-ul-img footer-p1-ul-img-2">
                                             <img class="footer-p1-img-4"
                                                     src="./img/footer-p1-qr.png" alt="">
 
-                                            <img class="footer-p1-img-3"
+                                            <figure>
+                                                <img class="footer-p1-img-3" sty
                                                     src="./img/footer-p1-ios.png" alt="">
 
-                                            <img class="footer-p1-img-3"
+                                                <img class="footer-p1-img-3" style="margin-top: 25px;"
                                                     src="./img/footer-p1-ggpl.png" alt="">
+                                            </figure>
 
 
                                     </figure>
