@@ -746,7 +746,6 @@ sup{
     width: 32px;
     height: 32px;
     object-fit: cover;
-    border-radius: ;
 }
 
 .footer-p1-img-2 {
@@ -762,6 +761,7 @@ sup{
 
 .footer-p1-img-4 {
     width: 80px;
+    height: 80px;
 }
 
 .footer-p1-img {
@@ -800,10 +800,14 @@ sup{
     object-fit: cover;
 }
 
-.footer-p1-li {
+.footer-p1-li{
     font-size: 1.2rem;
     color: #848484;
     line-height: 1.5;
+}
+
+.footer-p1-li:hover{
+    text-decoration: underline;
 }
 
 .footer-p2-ul {

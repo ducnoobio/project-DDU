@@ -249,24 +249,24 @@
                                   </div>
                                   
                                   <script>
-                                    const countdownInterval = setInterval(updateCountdown, 1000);
+                                    let endDate = new Date('23:59:59').getTime();/*khai báo biến, tạo time first*/
+                                    const countdownInterval = setInterval(updateCountdown, 1000);/*đặt hamf ghi đè*/
                                   
                                     function updateCountdown() {
-                                      const now = new Date().getTime();
-                                      const endDate = new Date('December 31, 2023 23:59:59').getTime();
-                                      const distance = endDate - now;
+                                      const now = new Date().getTime();/*tính lại thời điểm hiện tại*/
+                                      const distance = endDate - now;/*khoảng cách*/
                                   
                                       if (distance > 0) {
-                                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));/* đặt giờ phút giây*/
                                         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                                         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
                                   
-                                        document.getElementById('hours').innerHTML = padZero(hours);
+                                        document.getElementById('hours').innerHTML = padZero(hours);/* gọi phần tử cập nhật*/
                                         document.getElementById('minutes').innerHTML = padZero(minutes);
                                         document.getElementById('seconds').innerHTML = padZero(seconds);
                                       } else {
-                                        clearInterval(countdownInterval);
-                                        document.getElementById('wrapper').innerHTML = 'Đếm ngược đã kết thúc!';
+                                        //reset
+                                        endDate = new Date(now + 24 * 60 * 60 * 1000).getTime();
                                       }
                                     }
                                   
@@ -274,6 +274,7 @@
                                       return (number < 10 ? '0' : '') + number;
                                     }
                                   </script>
+                                  
                             </div>
                             <div class="xemthem">
                                 <a href="https://tiki.vn/deal-hot?tab=now" class="xemthem--desc">Xem thêm</a>
@@ -888,49 +889,49 @@
                             <li class="footer-p1-1">
                                     <h1 class="footer-h1">Hỗ trợ khách hàng</h1>
                                     <ul class="footer-p1-ul">
-                                            <li class="footer-p1-li">Hotline: 1900-6035
-                                                    (1000 đ/phút, 8-21h kể cả T7, CN)</li>
-                                            <li class="footer-p1-li">Các câu hỏi thường gặp</li>
-                                            <li class="footer-p1-li">Gửi yêu cầu hỗ trợ</li>
-                                            <li class="footer-p1-li">Hướng dẫn đặt hàng</li>
-                                            <li class="footer-p1-li">Phương thức vận chuyển</li>
-                                            <li class="footer-p1-li">Chính sách đổi trả</li>
-                                            <li class="footer-p1-li">Hướng dẫn trả góp</li>
-                                            <li class="footer-p1-li">Chính sách hàng nhập khẩu
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Hotline: 1900-6035
+                                                    (1000 đ/phút, 8-21h kể cả T7, CN)</a></li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Các câu hỏi thường gặp</a></li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Gửi yêu cầu hỗ trợ</a></li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Hướng dẫn đặt hàng</a></li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Phương thức vận chuyển</a></li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Chính sách đổi trả</a></li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Hướng dẫn trả góp</a></li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Chính sách hàng nhập khẩu</a>
                                             </li>
-                                            <li class="footer-p1-li">Hỗ trợ khách hàng:
-                                                    hotro@tiki.vn</li>
-                                            <li class="footer-p1-li">Báo lỗi bảo mật:
-                                                    security@tiki.vn</li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Hỗ trợ khách hàng:
+                                                    hotro@tiki.vn</a></li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Báo lỗi bảo mật:
+                                                    security@tiki.vn</a></li>
                                     </ul>
                             </li>
                             <li class="footer-p1-2">
                                     <h1 class="footer-h1">Về tiki</h1>
                                     <ul class="footer-p1-ul">
-                                            <li class="footer-p1-li">Giới thiệu tiki</li>
-                                            <li class="footer-p1-li">Tiki blog</li>
-                                            <li class="footer-p1-li">Tuyển dụng</li>
-                                            <li class="footer-p1-li">Chính sách bảo mật thanh toán
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Giới thiệu tiki</a></li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Tiki blog</a></li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Tuyển dụng</a></li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Chính sách bảo mật thanh toán</a>
                                             </li>
-                                            <li class="footer-p1-li">Chính sách bảomaatj thông tin
-                                                    cá nhân</li>
-                                            <li class="footer-p1-li">Chính sách giải quyết khiếu nại
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Chính sách bảomaatj thông tin
+                                                    cá nhân</a></li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Chính sách giải quyết khiếu nại</a>
                                             </li>
-                                            <li class="footer-p1-li">Điều khoản sử dụng </li>
-                                            <li class="footer-p1-li">Giới thiệu tiki xu</li>
-                                            <li class="footer-p1-li">Gói hội viên VIP</li>
-                                            <li class="footer-p1-li">Tiếp thị liên kết cùng tiki
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Điều khoản sử dụng </a></li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Giới thiệu tiki xu</a></li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Gói hội viên VIP</a></li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Tiếp thị liên kết cùng tiki</a>
                                             </li>
-                                            <li class="footer-p1-li">Bán hàng doanh nghiệp</li>
-                                            <li class="footer-p1-li">Điều kiện vận chuyển</li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Bán hàng doanh nghiệp</a></li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Điều kiện vận chuyển</a></li>
                                     </ul>
                             </li>
                             <li class="footer-p1-3">
                                     <h1 class="footer-h1">Hợp tác và liên kết</h1>
                                     <ul class="footer-p1-ul">
-                                            <li class="footer-p1-li">Quy chế hoạt động Sàn GDTMĐT
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Quy chế hoạt động Sàn GDTMĐT</a>
                                             </li>
-                                            <li class="footer-p1-li">Bán hàng cùng Tiki</li>
+                                            <li class="footer-p1-li"><a href="https://tiki.vn">Bán hàng cùng Tiki</a></li>
                                     </ul>
                                     <h1 class="footer-h1">Chứng nhận bởi</h1>
                                     <figure class="footer-p1-ul-img">
@@ -976,7 +977,7 @@
                                                 <img class="footer-p1-img-3" sty
                                                     src="./img/footer-p1-ios.png" alt="">
 
-                                                <img class="footer-p1-img-3" style="margin-top: 25px;"
+                                                <img class="footer-p1-img-3" style="margin-top: 14px;"
                                                     src="./img/footer-p1-ggpl.png" alt="">
                                             </figure>
 
@@ -985,17 +986,17 @@
                             </li>
                     </ul>
                     <ul class="footer-p2-ul">
-                            <li class="footer-p1-li">Trụ sở chính: Tòa nhà Viettel, Số 285, đường
-                                    Cách Mạng Tháng 8, phường 12, quận 10, Thành phố Hồ Chí Minh
+                            <li class="footer-p1-li"><a href="https://tiki.vn">Trụ sở chính: Tòa nhà Viettel, Số 285, đường
+                                    Cách Mạng Tháng 8, phường 12, quận 10, Thành phố Hồ Chí Minh</a>
                             </li>
-                            <li class="footer-p1-li">Tiki nhận đặt hàng trực tuyến và giao hàng tận
+                            <li class="footer-p1-li"><a href="https://tiki.vn">Tiki nhận đặt hàng trực tuyến và giao hàng tận
                                     nơi, chưa hỗ trợ mua và nhận hàng trực tiếp tại văn phòng hoặc
-                                    trung tâm xử lý đơn hàng</li>
-                            <li class="footer-p1-li">Giấy chứng nhận Đăng ký Kinh doanh số
+                                    trung tâm xử lý đơn hàng</a></li>
+                            <li class="footer-p1-li"><a href="https://tiki.vn">Giấy chứng nhận Đăng ký Kinh doanh số
                                     0309532909 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp
                                     lần đầu ngày 06/01/2010 và sửa đổi lần thứ 23 ngày 14/02/2022
 
-                                    © 2022 - Bản quyền của Công ty TNHH Ti Ki</li>
+                                    © 2022 - Bản quyền của Công ty TNHH Ti Ki</a></li>
                     </ul>
                     <div class="footer-p3">
                             <p class="footer-h1">Tiki - Thật nhanh, thật chất lượng, thật rẻ</p>
@@ -1023,18 +1024,18 @@
                     <div class="footer-p4">
                             <!-- <p class="footer-h1">Danh Mục Sản Phẩm</p> -->
                             <ul class="footer-p4cot1">
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Đồ Chơi - Mẹ & Bé</p>
                                             <p class="footer-p1-li">Thời Trang Cho Mẹ Và Bé / Đồ
                                                     chơi / Đồ dùng cho bé / Chăm sóc nhà cửa / Chăm
                                                     sóc mẹ mang thai, sau sinh / Dinh dưỡng cho bé /
                                                     Tã, Bỉm / Dinh dưỡng cho người lớn / Dinh dưỡng
                                                     cho mẹ / Thực phẩm ăn dặm / Chuẩn bị mang thai
-
+                                                </a>
                                             </p>
 
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Thực Phẩm Tươi Sống</p>
                                             <p class="footer-p1-li">Trái Cây / Thịt, Trứng / Cá,
                                                     thuỷ hải sản / Rau củ quả / Thực phẩm Việt /
@@ -1042,15 +1043,15 @@
                                                     vị / Gạo, mì, nông sản / Đồ hộp, đóng gói / Bia,
                                                     đồ uống / Thực phẩm chay / Dành cho trẻ em /
                                                     Bánh kẹo, giỏ quà / Thức ăn, đồ thú cưng / Chăm
-                                                    sóc cá nhân / Chăm sóc nhà cửa</p>
+                                                    sóc cá nhân / Chăm sóc nhà cửa</p></a>
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Điện Thoại - Máy Tính Bảng</p>
                                             <p class="footer-p1-li">Điện thoại Smartphone / Điện
                                                     thoại bàn / Điện thoại phổ thông / Máy đọc sách
-                                                    / Máy tính bảng</p>
+                                                    / Máy tính bảng</p></a>
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Làm Đẹp - Sức Khỏe</p>
                                             <p class="footer-p1-li">Chăm sóc da mặt / Dụng cụ làm
                                                     đẹp / Thực phẩm chức năng / Trang điểm / Chăm
@@ -1058,106 +1059,106 @@
                                                     khỏe / Sản phẩm thiên nhiên & Khác / Chăm sóc
                                                     tóc và da đầu / Chăm sóc cá nhân / Nước hoa / Hỗ
                                                     trợ tình dục / Bộ sản phẩm làm đẹp / Dược mỹ
-                                                    phẩm</p>
+                                                    phẩm</p></a>
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Điện Gia Dụng</p>
                                             <p class="footer-p1-li">Đồ dùng nhà bếp / Thiết bị gia
-                                                    đình</p>
+                                                    đình</p></a>
                                     </li>
                             </ul>
                             <ul class="footer-p4cot2">
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Thời trang nữ</p>
                                             <p class="footer-p1-li">Áo nữ / Đầm nữ / Quần nữ / Áo
                                                     liền quần - Bộ trang phục / Áo khoác nữ / Đồ ngủ
                                                     - Đồ mặc nhà nữ / Chân váy / Trang phục bơi nữ /
                                                     Thời trang bầu và sau sinh / Thời trang trung
-                                                    niên</p>
+                                                    niên</p></a>
 
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Thời trang nam</p>
                                             <p class="footer-p1-li">Áo thun nam / Quần nam / Áo vest
                                                     - Áo khoác nam / Áo sơ mi nam / Đồ lót nam / Áo
                                                     hoodie nam / Đồ ngủ, đồ mặc nhà nam / Đồ đôi -
                                                     Đồ gia đình nam / Áo nỉ - Áo len nam / Đồ bơi -
                                                     Đồ đi biển nam / Quần áo nam trung niên / Quần
-                                                    áo nam kích cỡ lớn</p>
+                                                    áo nam kích cỡ lớn</p></a>
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Giày - Dép nữ</p>
                                             <p class="footer-p1-li">Giày cao gót / Dép - Guốc nữ /
                                                     Giày thể thao nữ / Giày sandals nữ / Giày búp bê
                                                     / Giày boots nữ / Giày lười nữ / Phụ kiện giày /
-                                                    Giày Đế xuồng nữ</p>
+                                                    Giày Đế xuồng nữ</p></a>
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Giày - Dép nam</p>
                                             <p class="footer-p1-li">Giày lười nam / Giày tây nam /
                                                     Giày thể thao nam / Dép nam / Giày sandals nam /
-                                                    Phụ kiện giày nam / Giày boots nam</p>
+                                                    Phụ kiện giày nam / Giày boots nam</p></a>
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Túi thời trang nữ</p>
                                             <p class="footer-p1-li">Túi đeo chéo, túi đeo vai nữ /
                                                     Ví nữ / Túi xách tay nữ / Túi tote nữ / Phụ kiện
-                                                    túi</p>
+                                                    túi</p></a>
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Túi thời trang nam</p>
                                             <p class="footer-p1-li">Ví nam / Túi đeo chéo nam / Túi
-                                                    xách công sở nam / Túi bao tử, túi đeo bụng</p>
+                                                    xách công sở nam / Túi bao tử, túi đeo bụng</p></a>
                                     </li>
                             </ul>
                             <ul class="footer-p4cot3">
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Balo và Vali</p>
                                             <p class="footer-p1-li">Balo / Túi du lịch và phụ kiện /
                                                     Balo, cặp, túi chống sốc laptop / Vali, phụ kiện
                                                     vali
 
-                                            </p>
+                                            </p></a>
 
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Phụ kiện thời trang</p>
                                             <p class="footer-p1-li">Phụ kiện thời trang nữ / Mắt
-                                                    kính / Phụ kiện thời trang nam</p>
+                                                    kính / Phụ kiện thời trang nam</p></a>
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Đồng hồ và Trang sức</p>
                                             <p class="footer-p1-li">Trang sức / Đồng hồ nữ / Đồng hồ
-                                                    nam / Phụ kiện đồng hồ / Đồng hồ trẻ em</p>
+                                                    nam / Phụ kiện đồng hồ / Đồng hồ trẻ em</p></a>
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Laptop - Máy Vi Tính - Linh kiện
                                             </p>
                                             <p class="footer-p1-li">Linh Kiện Máy Tính - Phụ Kiện
                                                     Máy Tính / Thiết Bị Văn Phòng - Thiết Bị Ngoại
                                                     Vi / Thiết Bị Mạng / Thiết Bị Lưu Trữ / PC - Máy
-                                                    Tính Bộ / Laptop</p>
+                                                    Tính Bộ / Laptop</p></a>
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Nhà Cửa - Đời Sống</p>
                                             <p class="footer-p1-li">Trang trí nhà cửa / Dụng cụ nhà
                                                     bếp / Sửa chữa nhà cửa / Ngoài trời & sân vườn /
                                                     Nội thất / Đèn & thiết bị chiếu sáng / Đồ dùng
                                                     và thiết bị nhà tắm / Đồ dùng phòng ăn / Đồ dùng
                                                     phòng ngủ / Đồ thờ cúng / Nhạc cụ / Hoa tươi và
-                                                    cây cảnh</p>
+                                                    cây cảnh</p></a>
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Bách Hóa Online</p>
                                             <p class="footer-p1-li">Chăm sóc thú cưng / Đồ uống -
                                                     Pha chế dạng bột / Thực phẩm Đóng hộp và Khô /
                                                     Gia Vị và Chế Biến / Đậu & Hạt Các Loại / Đồ Ăn
                                                     Vặt / Sữa và các Sản phẩm từ sữa / Đồ Uống Không
-                                                    Cồn / Đồ uống có cồn / Bộ quà tặng</p>
+                                                    Cồn / Đồ uống có cồn / Bộ quà tặng</p></a>
                                     </li>
                             </ul>
                             <ul class="footer-p4cot4">
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Hàng Quốc Tế
                                             </p>
                                             <p class="footer-p1-li">Nhà Cửa - Đời Sống / Thời Trang
@@ -1169,48 +1170,48 @@
                                                     thiết bị công nghiệp / Tivi & Thiết Bị Nghe Nhìn
                                                     / Điện Thoại - Máy Tính Bảng
 
-                                            </p>
+                                            </p></a>
 
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Thiết Bị Số - Phụ Kiện Số</p>
                                             <p class="footer-p1-li">Phụ Kiện Điện Thoại và Máy Tính
                                                     Bảng / Phụ kiện máy tính và Laptop / Thiết Bị Âm
                                                     Thanh và Phụ Kiện / Thiết Bị Thông Minh và Linh
                                                     Kiện Điện Tử / Thiết Bị Đeo Thông Minh và Phụ
-                                                    Kiện / Thiết Bị Chơi Game và Phụ Kiện</p>
+                                                    Kiện / Thiết Bị Chơi Game và Phụ Kiện</p></a>
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Voucher - Dịch vụ</p>
                                             <p class="footer-p1-li">Thanh toán hóa đơn / Khóa học /
                                                     Du lịch - Khách sạn / Spa & Làm đẹp / Dịch vụ
                                                     khác / Nhà hàng - Ăn uống / Sự kiện - Giải trí /
                                                     Nha khoa - Sức khỏe / Phiếu quà tặng / Sim số -
-                                                    Thẻ cào - Thẻ game</p>
+                                                    Thẻ cào - Thẻ game</p></a>
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Ô Tô - Xe Máy - Xe Đạp</p>
                                             <p class="footer-p1-li">Phụ kiện - Chăm sóc xe / Xe điện
                                                     / Xe đạp / Xe máy / Ô tô / Xe Scooter / Dịch vụ,
-                                                    lắp đặt</p>
+                                                    lắp đặt</p></a>
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Nhà Sách Tiki</p>
                                             <p class="footer-p1-li">Sách tiếng Việt / Văn phòng phẩm
-                                                    / Quà lưu niệm / English Books</p>
+                                                    / Quà lưu niệm / English Books</p></a>
                                     </li>
                             </ul>
                             <ul class="footer-p4cot5">
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Điện Tử - Điện Lạnh</p>
                                             <p class="footer-p1-li">Âm thanh & Phụ kiện Tivi / Phụ
                                                     kiện điện lạnh / Tủ lạnh / Máy lạnh - Máy điều
                                                     hòa / Máy giặt / Tủ đông - Tủ mát / Tivi / Máy
                                                     nước nóng / Máy rửa chén / Máy sấy quần áo / Tủ
-                                                    ướp rượu</p>
+                                                    ướp rượu</p></a>
 
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">hể Thao - Dã Ngoại</p>
                                             <p class="footer-p1-li">Trang phục thể thao nữ / Trang
                                                     phục thể thao nam / Đồ dùng dã ngoại / Giày thể
@@ -1219,18 +1220,18 @@
                                                     cụ câu cá / Thể thao dưới nước / Các môn thể
                                                     thao đồng đội / Các môn thể thao chơi vợt / Các
                                                     môn thể thao đối kháng / Giày thể thao nữ / Thực
-                                                    phẩm bổ sung năng lượng / Dụng cụ leo núi</p>
+                                                    phẩm bổ sung năng lượng / Dụng cụ leo núi</p></a>
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Máy Ảnh - Máy Quay Phim</p>
                                             <p class="footer-p1-li">Phụ Kiện Máy Ảnh, Máy Quay /
                                                     Camera Giám Sát / Thiết Bị Ánh Sáng / Camera
                                                     Hành Trình - Action Camera và Phụ Kiện / Balo -
                                                     Túi Đựng - Bao Da / Ống Kính - Ống Ngắm / Ống
                                                     Kính (Lens) / Thiết Bị Quay Phim / Máy Bay
-                                                    Camera và Phụ Kiện / Máy Ảnh</p>
+                                                    Camera và Phụ Kiện / Máy Ảnh</p></a>
                                     </li>
-                                    <li class="footer-p1-li">
+                                    <li class="footer-p1-li"><a href="https://tiki.vn">
                                             <p class="footer-p3-2">Từ Khóa Được Quan Tâm</p>
                                             <p class="footer-p1-li">máy sưởi / đèn sưởi / quạt tích
                                                     điện sunhouse / máy sấy tóc philips / bàn ủi hơi
@@ -1238,7 +1239,7 @@
                                                     xiaomi / bình nươc nóng ariston / máy sưởi
                                                     xiaomi / máy hút bụi giường nệm / cây nước nóng
                                                     lạnh toshiba / robot hút bụi lau nhà của nhật /
-                                                    đèn sưởi âm trần / nồi cơm điện tefal</p>
+                                                    đèn sưởi âm trần / nồi cơm điện tefal</p></a>
                                     </li>
 
                             </ul>
